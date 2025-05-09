@@ -1,52 +1,26 @@
 <template>
-  <div id="app">
-    <NavBar />
-    <router-view />
-    <FooterSection />
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
-<script setup>
-import NavBar from '@/components/NavBar.vue'
-import FooterSection from '@/components/FooterSection.vue'
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-:root {
-  --primary-blue: #0066cc;
-  --secondary-orange: #ff6600;
-  --dark-bg: #1a1a1a;
-  --light-bg: #f5f5f5;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', 'Microsoft YaHei', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-
 #app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-section {
-  padding: 80px 5%;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--primary-blue);
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
